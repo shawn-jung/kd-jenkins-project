@@ -6,10 +6,9 @@ pipeline {
             steps {
                 git url: 'https://github.com/shawn-jung/kd-jenkins-project/jenkins-project.git', branch: 'main'
                 sh "ls -ltr"
-            }
-            steps {
                 echo "super ikkulim"
             }
+            
         }
         stage('Setup') {
             steps {
