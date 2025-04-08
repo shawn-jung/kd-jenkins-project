@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'python:3.11'
-        }
-    }
+    agent any
     stages {
 
         stage('Checkout') {
@@ -12,16 +8,9 @@ pipeline {
                 sh "ls -ltr"
                 echo "super ikkulim"
             }
-
-        }
-        stage('Setup') {
-            steps {
-                sh "pip install -r requirements.txt"
-            }
         }
         stage('Test') {
             steps {
-                sh "pytest"
                 sh "whoami"
             }
         }
